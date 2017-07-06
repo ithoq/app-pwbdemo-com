@@ -8,7 +8,7 @@ class SamplesController extends Controller
 {
     public function index(){
 
-        return "WELCOME TO LARAVEL THIS WAS A GIT CHANGE";
+        return view('pages.blank');
 
     }
 }
