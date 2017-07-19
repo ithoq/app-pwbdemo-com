@@ -3,7 +3,7 @@
 
 @include('include.head')
 
-<body class="fixed-header ">
+<body class="fixed-header mac desktop pace-done menu-pin menu-behind">
 
 @include('include.nav')
 
@@ -17,7 +17,7 @@
 
 </div>
 
-@include('sections.all2')
+@include('sections.blank')
 
 @include('include.footer')
 

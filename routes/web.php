@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('sample', ['as' => 'samples', 'uses' => '\App\Http\Controllers\SamplesController@index']);
+Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
