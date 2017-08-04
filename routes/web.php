@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
