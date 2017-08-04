@@ -230,6 +230,8 @@ Events / .event-container
 						text-align: center;
 						font-family: 'Montserrat';
 						font-size: 10px;	
+						letter-spacing: 0.06em;
+            			font-size: 10.5px;	
 					}
 				}
 			}
@@ -576,7 +578,10 @@ Events / .event-container
 				top: -15%;
 				color: rgba(0, 0, 0, 0.46);
 				font-weight: bold;
-				font-size: 12px;
+				font-size: 11px;
+				letter-spacing: 0.06em;
+            	font-size: 10.5px;
+            	font-family: 'Montserrat';
 				right:5px;
 			}
 		}
@@ -615,7 +620,7 @@ Responsive Util
 		}
 	}
 	.calendar-container {
-		height: calc(100% - 169px) !important;
+		height:100%;
 		.view.week-view .tble{
 			white-space: nowrap;
 			.thead{
@@ -686,10 +691,17 @@ Responsive Util
 	right:-240px;
 }
 .months-drager{
-	margin-left:27px;
-	width: calc(100% - 80px);
+	margin-left:16px;
+	margin-right:36px;
 	border-right:1px solid $color-master-light;
 	padding-top: 0;
+}
+.horizontal-app-menu {
+	.months-drager{
+		margin-left:0;
+		margin-right:0;
+		width: 100%;
+	}
 }
 }
 @media (max-width: 640px) {

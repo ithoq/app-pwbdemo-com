@@ -15,6 +15,7 @@
     padding-right: 6px;
     padding-bottom: 4px;
     color: $color-master;
+    border-radius: 10px;
 }
 .badge-success {
     background-color: $color-success;
@@ -47,6 +48,13 @@
 .badge-disable {
     background-color: $color-master-dark;
     color: $color-master;
+}
+
+/* Tool Tip
+--------------------------------------------------
+*/
+.tooltip-inner{
+    font-size: 12px;
 }
 
 /* Notification popup

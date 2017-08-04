@@ -1,6 +1,15 @@
-//Pages Calendar - Version 2.2.0
-
-(function($) {
+//Pages Calendar - Version 3.0.0
+(function(factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([ 'jquery', 'moment' ], factory);
+    }
+    else if (typeof exports === 'object') { // Node/CommonJS
+        module.exports = factory(require('jquery'), require('moment'));
+    }
+    else {
+        factory(jQuery, moment);
+    }
+})(function($, moment) {
     var PagesCalendar = function(element, options) {
         this.$element = $(element);
 
@@ -2129,7 +2138,8 @@
         return this;
     }
 
-})(jQuery);
+});
+
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set

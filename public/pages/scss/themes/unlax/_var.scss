@@ -1,11 +1,11 @@
-// Pages Unlax Theme  
+// Pages Unlax Theme
 // --------------------------------------------------
 // Copyright Reserved Revox - 2014
 // --------------------------------------------------
 
 $base-img-url: "../../img" !default;
 $assets-url: "../../../assets" !default;
-// Global Color 
+// Global Color
 // --------------------------------------------------
 // Base Grey Guided Color * change only $base-light
 // --------------------------------------------------
@@ -73,6 +73,15 @@ $layout-container-fixed-lg: 1700px !default;
 
 $layout-gutter-sm : 5px !default;
 
+//Horizontal Dropdown
+//---------------------------------------------------
+$navbar-width:45px;
+$menu-padding:25px;
+
+$header-lg-height:60px;
+$header-md-height:50px;
+$header-sm-height:45px;
+
 // Panels
 $panel-border-color: transparent !default;
 $panel-padding: 20px !default;
@@ -135,6 +144,8 @@ $color-info-darker: mix($color-info, $color-black, $mix-percentage-darker) !defa
 
 // Email colors
 $sidebar-background-color : $color-menu-dark !default;
+
+$secondary-sidebar-width : 250px;
 
 // Components
 // --------------------------------------------------

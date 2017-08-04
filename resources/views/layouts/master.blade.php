@@ -3,10 +3,11 @@
 
 @include('include.head')
 
-<body class="fixed-header mac desktop pace-done menu-pin menu-behind">
+<body class="fixed-header">
 
 @include('include.nav')
 
+<!-- START PAGE-CONTAINER -->
 <div class="page-container ">
 
     @include('include.header')
@@ -16,8 +17,7 @@
 @include('sections.all')
 
 </div>
-
-@include('sections.blank')
+<!-- END PAGE CONTAINER -->
 
 @include('include.footer')
 

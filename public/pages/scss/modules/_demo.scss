@@ -13,6 +13,18 @@ $assets-img-url:'../../assets/img/';
     & > div{
         height:calc(100% - 12px);
     }
+    [data-action]{
+        &.active:before{
+            background-image: url('@{assets-img-url}/demo/tick.svg');
+            width: 23px;
+            height: 23px;
+            content: '';
+            position: absolute;
+            top: 84px;
+            right: -10px;
+            z-index: 10;
+        }
+    }
     a{
         position: relative;
         display: block;
@@ -28,16 +40,6 @@ $assets-img-url:'../../assets/img/';
              & > img{
                 opacity: 0.87;
              }
-            &:before{
-                 background-image: url('#{$assets-img-url}/demo/tick.svg');
-                 width: 23px;
-                 height: 23px;
-                 content: '';
-                 position: absolute;
-                top: 84px;
-                right: -10px;
-                z-index: 10;
-            }
         }
         
         &:hover{
@@ -45,6 +47,21 @@ $assets-img-url:'../../assets/img/';
              & > img{
                 opacity: 0.7;
              }
+        }
+        
+        &.btn-toggle-layout{
+            &.active{
+                &:before{
+                     background-image: url('@{assets-img-url}/demo/tick.svg');
+                     width: 23px;
+                     height: 23px;
+                     content: '';
+                     position: absolute;
+                    top: 84px;
+                    right:-10px;
+                    z-index: 10;
+                }
+            }
         }
     }
     .builder-footer{
@@ -69,6 +86,7 @@ $assets-img-url:'../../assets/img/';
         padding-right: 0px;
         height: 100%;
         top:0;
+        background-color: #fff;
         .tab-pane{
              height: 100%;
              overflow-x: hidden !important;

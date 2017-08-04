@@ -2,18 +2,19 @@
 [19. Social App]
 */
 
-.social-wrapper, 
+.social-wrapper,
 .social{
     height: 100%;
     width: 100%;
 }
 
-/* Cover 
+/* Cover
 ------------------------------------
 */
 
 .social-wrapper .social .jumbotron{
     height: 60vh;
+    padding-top: 0;
 }
 .social-wrapper .social .cover-photo {
     position: relative;
@@ -53,7 +54,7 @@
     min-height: 100%;
 }
 
-/* Feed 
+/* Feed
 ------------------------------------
 */
 
@@ -67,13 +68,13 @@
 .social-wrapper .social .feed {
     overflow-y: hidden;
     width: 100%;
-   
+
     & > .day {
         white-space: normal;
         display: block;
         width: 100%;
         margin: 0 auto;
-        
+
         &:after {
             feed:'';
             display: block;
@@ -87,11 +88,11 @@
     }
 }
 
-/* Cards 
+/* Social Cards
 ------------------------------------
 */
 
-.card {
+.social-card {
     padding-bottom: 0;
     margin-bottom: 0;
     background: #FFF;
@@ -140,6 +141,7 @@
         h2 {
             color: @color-master-dark;
             font-size: 25px;
+            line-height: 32px;
             margin: 0;
             font-weight: normal;
         }
@@ -163,18 +165,26 @@
             background: @color-complete;
         }
     }
+    .card-header, .card-footer {
+        background-color: @color-white;
+        .transition(background .2s ease);
+    }
     &.share {
         .card-header {
             padding: 15px 15px 12px;
-            border-bottom:1px solid @color-complete-lighter;
+            border-bottom:1px solid @color-master-light;
+            border-top-right-radius: 2px;
+            border-top-left-radius: 2px;
             &:hover {
                 background: @color-complete-lighter;
+                border-color:@color-complete-lighter;
                 cursor: pointer;
-                border-top-right-radius: 2px;
-                border-top-left-radius: 2px;
                 h6 {
                     opacity: .6;
                 }
+            }
+            &.last{
+                border-bottom: none;
             }
             .user-pic {
                 .float(left);
@@ -401,6 +411,14 @@
             display: none !important;
         }
     }
+    .progress{
+        &:before{
+            background:none;
+        }
+    }
+    .show{
+        display: block;
+    }
 }
 
 
@@ -417,14 +435,14 @@
         .col-md-4:nth-child(2), .col-md-4:nth-child(3){
             width: 50%;
         }
-      
+
     }
 }
 @media (max-width: 667px) {
    .social-wrapper .social .feed {
-  
+
     & > .day {
-        
+
         & > .card{
             width: 100% !important;
         }

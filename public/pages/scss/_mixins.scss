@@ -35,6 +35,44 @@
   @include size($size, $size);
 }
 
+@mixin flexbox(){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-inline(){
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+@mixin align-items($argument){
+    -webkit-box-align: $argument;
+    -webkit-align-items: $argument;
+    -ms-flex-align: $argument;
+    align-items: $argument;
+}
+
+@mixin flex-column{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-row{
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+
 // Placeholder text
 @mixin placeholder($color: $input-color-placeholder) {
   &:-moz-placeholder            { color: $color; } // Firefox 4-18
@@ -90,20 +128,20 @@
 }
 
 //Padding Helper Classes
-@mixin generate-paddings-options-sm($n, $j: 0) {
+@mixin generate-paddings-options-prefix($prefix,$n, $j: 0) {
   @if $j <= $n {
     @for $i from $j through $n {
       $step : $i*5;  
-      .sm-p-t-#{$step} {
+      .#{$prefix}-p-t-#{$step} {
         margin-top: ($step*1px) !important;
       }
-      .sm-p-r-#{$step} {
+      .#{$prefix}-p-r-#{$step} {
         margin-right: ($step*1px) !important;
       }
-        .sm-p-l-#{$step} {
+      .#{$prefix}-p-l-#{$step} {
         margin-left: ($step*1px) !important;
       }
-       .sm-p-b-#{$step} {
+      .#{$prefix}-p-b-#{$step} {
         margin-bottom: ($step*1px) !important;
       }
       //@include generate-margin-options($n, ($i + 1));
@@ -111,20 +149,20 @@
   }
 }
 //Margins Helper Classes
-@mixin generate-margin-options-sm($n, $j: 0) {
+@mixin generate-margin-options-prefix($prefix,$n, $j: 0) {
   @if $j <= $n {
     @for $i from $j through $n {
       $step : $i*5;  
-      .sm-m-t-#{$step} {
+      .#{$prefix}-m-t-#{$step} {
         margin-top: ($step*1px) !important;
       }
-      .sm-m-r-#{$step} {
+      .#{$prefix}-m-r-#{$step} {
         margin-right: ($step*1px) !important;
       }
-        .sm-m-l-#{$step} {
+      .#{$prefix}-m-l-#{$step} {
         margin-left: ($step*1px) !important;
       }
-       .sm-m-b-#{$step} {
+      .#{$prefix}-m-b-#{$step} {
         margin-bottom: ($step*1px) !important;
       }
       //@include generate-margin-options($n, ($i + 1));
@@ -979,3 +1017,4 @@
   $hsl: hsv-to-hsl($h, $s, $v);
   @return hsl(nth($hsl, 1), nth($hsl, 2), nth($hsl, 3));
 }
+

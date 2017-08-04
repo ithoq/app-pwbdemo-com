@@ -6,7 +6,7 @@
 --------------------------------------------------
 */
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
 
 html{
     font-size: 100%;
@@ -81,11 +81,11 @@ h6.block {
 */
 a {
     text-shadow: none !important;
-    color: @color-complete-dark;
+    color: @color-primary-dark;
     transition: color 0.1s linear 0s,background-color 0.1s linear 0s,opacity 0.2s linear 0s !important;
 }
 a:focus, a:hover, a:active {
-    color: @color-complete;
+    color: @color-primary;
 }
 a,a:focus, a:hover, a:active {
     outline: 0 !important;
@@ -118,6 +118,7 @@ p {
 small, 
 .small{
     line-height: 18px;
+    font-size: 85%;
 }
 label {
     &.inline {
@@ -128,6 +129,7 @@ label {
     }
 }
 ul,ol {
+    margin-bottom: 10px;
     & > li {
         .padding-left(3px);
         line-height: 24px;
@@ -285,7 +287,7 @@ hr{
 ------------------------------------
 */
 .bg-primary {
-    background-color: @color-primary;
+    background-color: @color-primary !important;
 }
 .bg-primary-dark {
     background-color: @color-primary-dark;
@@ -323,7 +325,7 @@ hr{
 ------------------------------------
 */
 .bg-success {
-    background-color: @color-success;
+    background-color: @color-success !important;
 }
 .bg-success-dark {
     background-color: @color-success-dark;
@@ -342,7 +344,7 @@ hr{
 ------------------------------------
 */
 .bg-info{
-    background-color: @color-info;
+    background-color: @color-info !important;
 }
 .bg-info-dark{
     background-color: @color-info-dark;
@@ -361,7 +363,7 @@ hr{
 ------------------------------------
 */
 .bg-danger {
-    background-color: @color-danger;
+    background-color: @color-danger !important;
 }
 .bg-danger-dark {
     background-color: @color-danger-dark;
@@ -380,7 +382,7 @@ hr{
 ------------------------------------
  */
 .bg-warning {
-    background-color: @color-warning;
+    background-color: @color-warning !important;
 }
 .bg-warning-dark {
     background-color: @color-warning-dark;
@@ -497,10 +499,12 @@ hr{
 .label {
     padding: 3px 9px;
     font-size: 11px;
+    line-height: 1;
     text-shadow: none;
     background-color: @color-master-light;
     font-weight: 600;
     color: @color-master;
+    border-radius: .25em;
 }
 .label-success {
     background-color: @color-success;
@@ -534,7 +538,7 @@ hr{
     font-size: 10px !important;
 }
 .fs-11{
-    font-size: 11px !important;
+    font-size: 10.5px !important;
 }
 .fs-12{
     font-size: 12px !important;
@@ -630,12 +634,15 @@ hr{
     white-space: nowrap;
 }
 
-.jumbotron p{
-    font-size: 14px;
-    font-weight: normal;
-    margin-bottom: inherit;
-    &.small{
-        font-size: 85%;
+.jumbotron {
+    .border-radius(0);
+    p{
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: inherit;
+        &.small{
+            font-size: 85%;
+        }
     }
 }
 
@@ -690,14 +697,6 @@ hr{
         font-size: 13px;
         letter-spacing: normal;
     }
-    h1{
-        font-size: 33px;
-        line-height: 49px;
-    }
-    h2{
-        font-size: 29px;
-        line-height: 40px;
-    }
     h3{
         font-size: 29px;
         line-height: 33px;
@@ -724,7 +723,7 @@ hr{
     .jumbotron p{
         font-size: 13px;
         &.small{
-            font-size: 88%;
+            font-size: 85%;
         }
     }
     small, 
@@ -735,3 +734,31 @@ hr{
 
 }
 
+.alert {
+    & > p, & > ul {
+        margin-bottom: 0;
+    }
+}
+.table{
+    & > tbody{
+        & > tr{
+            & > td, & > th{
+                line-height: 1.42857143;
+            }
+        }
+    }
+    & > tfoot{
+        & > tr{
+            & > td, & > th{
+                line-height: 1.42857143;
+            }
+        }
+    }
+    & > thead{
+        & > tr{
+            & > td, & > th{
+                line-height: 1.42857143;
+            }
+        }
+    }
+}

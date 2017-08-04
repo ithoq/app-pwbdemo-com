@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
+Route::get('ezlogin', ['as' => 'ezlogin', 'uses' => '\App\Http\Controllers\EZLoginController@index']);
 
 Auth::routes();
 

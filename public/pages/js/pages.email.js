@@ -73,10 +73,8 @@
                     var subject = $this.subject;
                     var body = $this.body.replace(/<(?:.|\n)*?>/gm, '');
                     var time = $this.time;
-                    var colors = ['b-success', 'b-primary', 'b-warning', 'b-info', 'b-complete', 'b-danger'];
-                    var color = colors[Math.floor(Math.random() * (6))];
                     var li = '<li class="item padding-15" data-email-id="' + id + '"> \
-                                <div class="thumbnail-wrapper d32 circular bordered ' + color + '"> \
+                                <div class="thumbnail-wrapper d32 circular"> \
                                     <img width="40" height="40" alt="" data-src-retina="' + dpRetina + '" data-src="' + dp + '" src="' + dpRetina + '"> \
                                 </div> \
                                 <div class="checkbox  no-margin p-l-10"> \

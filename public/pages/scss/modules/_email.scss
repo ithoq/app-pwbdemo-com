@@ -135,3 +135,16 @@
         margin-left: 0;
     }
 }
+
+
+.email-composer{
+    .email-toolbar-wrapper{
+        .dropdown{
+            .dropdown-toggle{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

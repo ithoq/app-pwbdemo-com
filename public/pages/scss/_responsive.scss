@@ -8,13 +8,12 @@
 /*** Large screens ***/
 @media (min-width: 1824px) {
 
-  .visible-xlg {
+    .visible-xlg {
         display: block !important;
     }
     .hidden-xlg {
         display: none !important;
     }
-    
 
     .quickview-wrapper .tab-content #quickview-notes > .inner{
         width:570px;
@@ -30,60 +29,84 @@
     .menu-pin .container-fluid.container-fixed-lg{
         width: $layout-container-fixed-lg - $layout-sidepanel-pin-width;
     }
-    .visible-xlg {
-        display: block !important;
-    }
-    .hidden-xlg {
-        display: none !important;
-    }
+    // .visible-xlg {
+    //     display: block !important;
+    // }
+    // .hidden-xlg {
+    //     display: none !important;
+    // }
 
      .col-xlg-1, .col-xlg-2, .col-xlg-3, .col-xlg-4, .col-xlg-5, .col-xlg-6, .col-xlg-7, .col-xlg-8, .col-xlg-9, .col-xlg-10, .col-xlg-11 {
-        float: left;
+        // float: left;
         min-height: 1px;
         padding-left: 15px;
         padding-right: 15px;
         position: relative;
     }
     .col-xlg-12 {
-        float: left;
+        // float: left;
         min-height: 1px;
         padding-left: 15px;
         padding-right: 15px;
         position: relative;
-        width: 100%;
+        // width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .col-xlg-11 {
-        width: 91.6667%;
+        // width: 91.6667%;
+        flex: 0 0 91.6667%;
+        max-width: 91.6667%;
     }
     .col-xlg-10 {
         width: 83.3333%;
+        flex: 0 0 83.3333%;
+        max-width: 83.3333%;
     }
     .col-xlg-9 {
-        width: 75%;
+        // width: 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
     }
     .col-xlg-8 {
-        width: 66.6667%;
+        // width: 66.6667%;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
     }
     .col-xlg-7 {
-        width: 58.3333%;
+        // width: 58.3333%;
+        flex: 0 0 58.3333%;
+        max-width: 58.3333%;
     }
     .col-xlg-6 {
-        width: 50%;
+        // width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     .col-xlg-5 {
-        width: 41.6667%;
+        // width: 41.6667%;
+        flex: 0 0 41.6667%;
+        max-width: 41.6667%;
     }
     .col-xlg-4 {
-        width: 33.3333%;
+        // width: 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
     }
     .col-xlg-3 {
-        width: 25%;
+        // width: 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
     .col-xlg-2 {
-        width: 16.6667%;
+        // width: 16.6667%;
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
     }
     .col-xlg-1 {
-        width: 8.33333%;
+        // width: 8.33333%;
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
     }
     .col-xlg-pull-12 {
         right: 100%;
@@ -222,6 +245,17 @@
         padding: 11px 21px !important;
     }
 }
+
+
+
+@media only screen and (max-width: 1199px) {
+    .visible-xl-down{
+        display: block !important;
+    }
+}
+
+
+
 /*** Desktops & Laptops ***/
 @media only screen and (min-width: 980px) {
     body{
@@ -233,7 +267,6 @@
             }
         }
         &.menu-pin{
-            overflow-x: hidden;
             .header .brand{
                 width: 245px;
             }
@@ -293,6 +326,7 @@
                 background-color: #fff;
                 border-bottom: 1px solid rgba(230, 230, 230, 0.7);
                 padding: 0 20px 0 0;
+                height: 100%;
               }
             }
             .page-sidebar{
@@ -339,8 +373,24 @@
 /*** General tablets and phones ***/
 @media (max-width: 991px) {
 
+    .hidden-lg-down{
+        display: none !important;
+    }
+
+
     .page-container{
         padding-left: 0; 
+    }
+
+
+    .d-flex-lg-down {
+        display: flex;
+    }
+    .justify-between-lg-down{
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 
     body{
@@ -365,9 +415,19 @@
               }
             }
         }
+        &.horizontal-app-menu{
+            .header{
+                & > .container{
+                    padding: 0;
+                }
+            }
+            .secondary-sidebar{
+                margin-left: 0;
+            }
+        }
     }
     .header {
-        padding: 0 10px;
+        padding: 0 15px;
         width: 100%;
         border-bottom: 1px solid rgba(0,0,0,.07);
         background: #fff !important;
@@ -483,7 +543,18 @@
             display: none;
         }
     }
-    .inner-content{
+    .horizontal-app-menu .secondary-sidebar{
+        display: inline-block;
+        position: relative;
+        top: inherit;
+        left: inherit;
+        right: inherit;
+        padding: 20px 0;
+        border-radius: 0;
+        float: left;
+        height: 100%;
+    }
+    .inner-content, .horizontal-app-menu .inner-content{
         margin: 0;
     }
      .breadcrumb{
@@ -518,39 +589,11 @@
         right: 50px;
         top: -9px;
     }
-      /*** Horizontal Menu **/
 
-    .horizontal-menu .bar {
-        background-color: #fff;
-        display: none;
-        .bar-inner {
-            display: block;
-            max-height: 400px;
-            overflow: scroll;
-            -webkit-overflow-scrolling: touch;
-            & > ul > li {
-                display: block;
-                .classic {
-                    position: relative;
-                    background-color: transparent;
-                    top: 0;
-                }
-                & .mega,
-                &.horizontal {
-                    position: relative;
-                }
-                & > .horizontal {
-                    position: relative;
-                    top: 0;
-                    border-bottom: 0;
-                    li {
-                        display: block;
-                    }
-                }
-            }
-        }
+    .container{
+        width: 100%;
     }
-
+    
     //Table Block
     .table-responsive-block{
          table,thead,tbody,th,td, tr { 
@@ -593,6 +636,24 @@
             }
         }
  
+    }
+    .kill-pull-md-down{
+        position: relative;
+        display: block;
+        width: inherit;
+        .toggle-secondary-sidebar{
+            display: inline-block;
+            font-size: 18px;
+        }
+    }
+    
+    //set a min hieght for dropdown tabs
+    .nav-tabs-header.nav-tabs-linetriangle{
+        height: 61px;
+    }
+
+    .overlay{
+        padding-left: 15px;
     }
 }
 
@@ -640,6 +701,11 @@
   .sm-b-b{
     border-bottom-width:1px;
   }
+  .sidebar-menu{
+    .icon-thumbnail {
+        margin-right: 15px;
+    }
+  }
 }
 
 // Make all columns equal height
@@ -655,6 +721,13 @@
     }
 }
 
+@media (max-width: 1199px) and (min-width: 992px){
+    //@TODO : Old Media Query current BS4 doesnt not allow this. 
+    .visible-md {
+        display: block!important;
+    }
+}
+
 @media (min-width:992px){
     .row-same-height{
       overflow: hidden; 
@@ -662,12 +735,6 @@
         margin-bottom: -99999px;
         padding-bottom: 99999px;
       }
-    }
-    .horizontal-menu .bar{
-        display: table !important;
-        & + div{
-            padding-top: 50px;
-        }
     }
 }
 
@@ -682,7 +749,38 @@
     .box-layout .container .jumbotron, .container-fluid .jumbotron {
         padding: 0;
     }
+    .d-flex-md-up{
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    .dataTables_wrapper.form-inline .checkbox input[type=checkbox], .form-inline .radio input[type=radio] {
+        position: absolute;
+    }
+    .justify-end-md-up{
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
 }
+
+
+@media (min-width:700px){
+    .dd {
+        float: none;
+    }
+}
+
+
 
     /* Portrait view of all tablet devices */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
@@ -704,6 +802,23 @@
             width: auto;
         }
     }
+}
+
+//MD Screen
+@media (max-width: 991px) and (min-width: 768px){
+    //OLD BS classes Remove later
+    .visible-sm {
+        display: block;
+    }
+    .hidden-sm{
+        display: none;
+    }
+    .visible-sm-inline-block {
+        display: inline-block!important;
+    }
+    //New Screen Prefix padding and margin
+    @include generate-paddings-options-prefix("md",3);
+    @include generate-paddings-options-prefix("md",3);
 }
 
 @media (max-width:979px){
@@ -797,19 +912,20 @@
         overflow:hidden;
     }
 
-     .jumbotron,.container-fluid{
+    .jumbotron,.container-fluid{
         padding-left: 0;
         padding-right: 0;
 
-     }
+    }
    
-     .page-container .page-content-wrapper .content {
+    .page-container .page-content-wrapper .content {
         padding-top: $layout-mobile-header-height;
         padding-bottom: 100px;
     }
     .page-sidebar .sidebar-header{
         padding: 0 12px;
     }
+
     .page-sidebar .sidebar-menu .menu-items > li{
         & > a{
             padding-left: 20px;
@@ -823,13 +939,13 @@
         margin-right: 20px;
     }
 
-  .sm-pull-bottom, .sm-pull-up{
-    position: relative !important;
-  }
+    .sm-pull-bottom, .sm-pull-up{
+        position: relative !important;
+    }
 
   //Generate Margin and Paddings.
-    @include generate-paddings-options-sm(10);
-    @include generate-margin-options-sm(10);
+    @include generate-paddings-options-prefix("sm",10);
+    @include generate-paddings-options-prefix("sm",10);
 
   .sm-no-margin {
     margin: 0px;
@@ -866,6 +982,52 @@
     width: 100%;
     height: auto;
   }
+  .email-composer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .sm-padding-10 {
+    padding: 10px!important;
+   }
+
+  .lock-box{
+    align-items: flex-start;
+    height: auto;
+  }
+  .login-box{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+    .visible-xs-inline-block {
+        display: inline-block!important;
+    }
+
+    .nav-tabs-linetriangle {
+        &.nav-cust{
+            flex-direction: column;
+        }
+        li {
+            a.active:after, a.active:before {
+                display: none;
+            }
+        }
+    }
+
+    //View Port Heights
+    .sm-vh-25{
+        height: 25vh;
+    }
+    .sm-vh-50{
+        height: 50vh;
+    }
+    .sm-vh-75{
+        height: 75vh;
+    }
+    .sm-vh-100{
+        height: 100vh;
+    }
 }
 
 
@@ -958,11 +1120,6 @@
        only screen and (min--moz-device-pixel-ratio: 2.0),
        only screen and (-o-min-device-pixel-ratio: 200/100),
        only screen and (min-device-pixel-ratio: 2.0) {
-        .icon-set {
-            background: url('#{$base-img-url}/icons/top_tray_2x.png');
-            position: relative;
-            background-size: 95px 19px;
-        }
         .editor-icon {
             background-image: url("#{$base-img-url}/editor_tray_2x.png");
             background-size: 480px 40px; 
@@ -977,4 +1134,20 @@
         background-size: 114px 29px;
       }
 
+}
+
+.hidden{
+    display: none;
+}
+.visible-sm, .visible-xs {
+    display: none;
+}
+
+@media (max-width: 767px){
+    .visible-xs {
+        display: block;
+    }
+    .hidden-xs{
+        display: none;
+    }
 }

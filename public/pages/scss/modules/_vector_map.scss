@@ -2,6 +2,11 @@
 [26. Vector Map : Mapplic Plugin] 
 */
 
+.horizontal-app-menu{
+	.map-controls{
+		left: 0;
+	}
+}
 .mapplic-container {
 	width: 100%;
 	background-color: transparent;

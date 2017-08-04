@@ -15,6 +15,7 @@
     padding-right: 6px;
     padding-bottom: 4px;
     color: @color-master;
+    border-radius: 10px;
 }
 .badge-success {
     background-color: @color-success;
@@ -47,6 +48,13 @@
 .badge-disable {
     background-color: @color-master-dark;
     color: @color-master;
+}
+
+/* Tool Tip
+--------------------------------------------------
+*/
+.tooltip-inner{
+    font-size: 12px;
 }
 
 /* Notification popup
@@ -143,7 +151,7 @@
                 height: 100%;
                 clear: both;
                 position: relative;
-                .more-details-inner{    
+                .more-details-inner{
                     .margin-left(10px);
                     .padding-left(28px);
                     padding-top: 15px;
@@ -260,7 +268,7 @@
             top: 15px;
         }
     }
-    
+
 }
 
 /* Pages Notifications plugin
@@ -305,7 +313,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"]{
     margin: 0;
 }
 
-/* Simple 
+/* Simple
 ------------------------------------
 */
 
@@ -318,7 +326,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"]{
      max-height: 250px;
     overflow: hidden;
 }
-/* Bar 
+/* Bar
 ------------------------------------
 */
 
@@ -381,7 +389,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"]{
         -webkit-transform: translateY(0);
     }
 }
-/* Circle 
+/* Circle
 ------------------------------------
 */
 
@@ -400,6 +408,9 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"]{
 }
 .pgn-wrapper[data-position$='-left'] .pgn-circle .alert {
     float: left;
+}
+.pgn-wrapper[data-position^='bottom-'] .pgn-circle .alert {
+    margin-bottom: 20px;
 }
 .pgn-circle .alert > div > div.pgn-thumbnail > div {
     border-radius: 50%;
@@ -486,15 +497,15 @@ padding:12px 0;
     }
 }
 
-/* Flip 
+/* Flip
 ------------------------------------
 */
 
 .pgn-wrapper[data-position^='top-'] .pgn-flip {
-    top: -30px;
+    // top: -30px;
 }
 .pgn-wrapper[data-position^='bottom-'] .pgn-flip {
-    bottom: -30px;
+    // bottom: -30px;
 }
 .pgn-wrapper[data-position^='bottom-'] .pgn-flip .alert {
     -webkit-transform-origin: 50% 100%;
@@ -620,7 +631,7 @@ body > .pgn-wrapper{
     }
 }
 @media (max-width: 767px) {
-    body > .pgn-wrapper[data-position$='-left'], 
+    body > .pgn-wrapper[data-position$='-left'],
     body > .pgn-wrapper[data-position$='-right'] {
         left: 10px !important;
         right: 10px !important;
@@ -635,13 +646,13 @@ body > .pgn-wrapper{
 
 /* Notifications demo
 --------------------------------------------------
-*/ 
+*/
 .notification-positions{
     border-radius: 4px;
     border:3px dashed @color-master-light;
     height: 370px;
     position: relative;
-    
+
     & > div > .position:not(:only-child){
         max-width: 50%;
     }
@@ -664,5 +675,9 @@ body > .pgn-wrapper{
             img{
                 width: 100%;
             }
-    }  
+    }
+}
+
+.notification-tabs{
+  flex-wrap: wrap;
 }

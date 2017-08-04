@@ -3,7 +3,7 @@
 */
 
 
-/* Email Components 
+/* Email Components
 --------------------------------------------------
 */
 .compose-wrapper{
@@ -21,7 +21,7 @@
 }
 
 .email-composer{
-    .margin-left(250px);
+    // .margin-left(250px);
     position: relative;
     overflow: auto;
     height: 100%;
@@ -107,10 +107,10 @@
                 width: 100% !important;
             }
         }
-        
+
     }
 }
-/* Email App Top Header 
+/* Email App Top Header
 --------------------------------------------------
 */
 .header-wrapper-email{
@@ -123,7 +123,7 @@
     }
 }
 
-/* Responsive Handler : Email App 
+/* Responsive Handler : Email App
 --------------------------------------------------
 */
 
@@ -132,5 +132,17 @@
 @media (max-width: 1024px){
     .email-composer{
         .margin-left(0);
+    }
+}
+
+.email-composer{
+    .email-toolbar-wrapper{
+        .dropdown{
+            .dropdown-toggle{
+                &::after{
+                    display: none;
+                }
+            }
+        }
     }
 }

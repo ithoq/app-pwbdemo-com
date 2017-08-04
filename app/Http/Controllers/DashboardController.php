@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\EZAppController;
 
-class DashboardController extends Controller
+class DashboardController extends EZAppController
 {
-    public function index(){
 
-        return view('pages.dashboard');
+
+    public function index(Request $request){
+
+        return $this->ezAppDisplayPage($this->ezpage_settings);
 
     }
 }

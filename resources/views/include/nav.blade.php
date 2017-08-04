@@ -1,5 +1,6 @@
+<!-- BEGIN SIDEBPANEL-->
 <nav class="page-sidebar" data-pages="sidebar">
-
+    <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
     <div class="sidebar-overlay-slide from-top" id="appMenu">
         <div class="row">
             <div class="col-xs-6 no-padding">
@@ -22,21 +23,21 @@
             </div>
         </div>
     </div>
-
-
+    <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
+    <!-- BEGIN SIDEBAR MENU HEADER-->
     <div class="sidebar-header">
         <img src="assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png" data-src-retina="assets/img/logo_white_2x.png" width="78" height="22">
         <div class="sidebar-header-controls">
-            <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>
+            <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20 hidden-md-down" data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>
             </button>
-            <button type="button" class="btn btn-link visible-lg-inline" data-toggle-pin="sidebar"><i class="fa fs-12"></i>
+            <button type="button" class="btn btn-link hidden-md-down" data-toggle-pin="sidebar"><i class="fa fs-12"></i>
             </button>
         </div>
     </div>
-
-
+    <!-- END SIDEBAR MENU HEADER-->
+    <!-- START SIDEBAR MENU -->
     <div class="sidebar-menu">
-
+        <!-- BEGIN SIDEBAR MENU ITEMS-->
         <ul class="menu-items">
             <li class="m-t-30 ">
                 <a href="index.html" class="detailed">
@@ -44,13 +45,6 @@
                     <span class="details">12 New Updates</span>
                 </a>
                 <span class="bg-success icon-thumbnail"><i class="pg-home"></i></span>
-            </li>
-            <li class="">
-                <a href="http://pages.revox.io/dashboard/latest/html/widget.html" class="detailed">
-                    <span class="title">Widgets</span>
-                    <span class="details">22 items</span>
-                </a>
-                <span class="icon-thumbnail">W</span>
             </li>
             <li class="">
                 <a href="email.html" class="detailed">
@@ -114,16 +108,8 @@
                         <span class="icon-thumbnail">bl</span>
                     </li>
                     <li class="">
-                        <a href="sidemenu_and_horizontal_menu.html">Horizontal Menu</a>
-                        <span class="icon-thumbnail">hm</span>
-                    </li>
-                    <li class="">
                         <a href="rtl_layout.html">RTL</a>
                         <span class="icon-thumbnail">rl</span>
-                    </li>
-                    <li class="">
-                        <a href="builder.html#tabContent">Columns</a>
-                        <span class="icon-thumbnail">cl</span>
                     </li>
                 </ul>
             </li>
@@ -200,8 +186,8 @@
                 </ul>
             </li>
             <li class="">
-                <a href="portlets.html">
-                    <span class="title">Portlets</span>
+                <a href="cards.html">
+                    <span class="title">Cards</span>
                 </a>
                 <span class="icon-thumbnail"><i class="pg-grid"></i></span>
             </li>
@@ -262,7 +248,7 @@
                         <a href="500.html">500 Page</a>
                         <span class="icon-thumbnail">pg</span>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="blank_template.html">Blank Page</a>
                         <span class="icon-thumbnail">bp</span>
                     </li>
@@ -325,5 +311,7 @@
         </ul>
         <div class="clearfix"></div>
     </div>
-
+    <!-- END SIDEBAR MENU -->
 </nav>
+<!-- END SIDEBAR -->
+<!-- END SIDEBPANEL-->
