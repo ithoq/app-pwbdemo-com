@@ -11,12 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
+
+//Route::get('ezlogin', ['as' => 'ezlogin', 'uses' => '\App\Http\Controllers\EZLoginController@index']);
+
+Route::get('/', ['as' => 'root', 'uses' => '\App\Http\Controllers\Auth\LoginController@login']);
 Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
-Route::get('ezlogin', ['as' => 'ezlogin', 'uses' => '\App\Http\Controllers\EZLoginController@index']);
+Route::get('forms', ['as' => 'forms', 'uses' => '\App\Http\Controllers\FormsController@index']);
+Route::get('tables', ['as' => 'tables', 'uses' => '\App\Http\Controllers\TablesController@index']);
+Route::get('users', ['as' => 'users', 'uses' => '\App\Http\Controllers\UsersController@index']);
+
+Route::get('vendors', ['as' => 'vendors', 'uses' => '\App\Http\Controllers\VendorsController@index']);
 
 Auth::routes();
 

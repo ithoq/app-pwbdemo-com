@@ -9,7 +9,7 @@
     @yield('content')
 </div>
 
-@include('include.footer')
+@include('include.auth-footer')
 
 </body>
 </html>

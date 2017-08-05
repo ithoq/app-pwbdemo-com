@@ -12,7 +12,15 @@
 
     @include('include.header')
 
-@yield('content')
+        <!-- START PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrapper ">
+
+            @yield('content')
+
+            @include('include.page-footer')
+
+        </div>
+        <!-- END PAGE CONTENT WRAPPER -->
 
 @include('sections.all')
 
