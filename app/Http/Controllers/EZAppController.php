@@ -24,6 +24,7 @@ class EZAppController extends BaseController
         $this->ezapp_set['view_display'] = EZ_PAGES_DIR._EZPERIOD_.EZ_SET_VIEW;
         $this->ezapp_set['auth_redirect'] = false;
         $this->ezapp_set['redirect_url'] = EZ_DASHBOARD_VIEW;
+        $this->ezapp_set['base_url'] = url('/');
 
         //$this->middleware('auth');
 
@@ -68,6 +69,8 @@ class EZAppController extends BaseController
         } else {
             define('EZ_SET_VIEW',  (defined('EZ_DASHBOARD_VIEW') )? EZ_DASHBOARD_VIEW: 'dashbaord');
         }
+
+        if(!defined('EZ_SET_VIEW') ) { define('EZ_SET_VIEW', ''); }
 
     }
 

@@ -24,8 +24,13 @@ Route::get('forms', ['as' => 'forms', 'uses' => '\App\Http\Controllers\FormsCont
 Route::get('tables', ['as' => 'tables', 'uses' => '\App\Http\Controllers\TablesController@index']);
 Route::get('users', ['as' => 'users', 'uses' => '\App\Http\Controllers\UsersController@index']);
 
-Route::get('vendors', ['as' => 'vendors', 'uses' => '\App\Http\Controllers\VendorsController@index']);
+Route::group(['prefix' => 'vendors'], function () {
 
+    Route::get('/', ['as' => 'vendors', 'uses' => '\App\Http\Controllers\VendorsController@index']);
+    Route::get('create', ['as' => 'create.vendor', 'uses' => '\App\Http\Controllers\VendorsController@createVendor']);
+    Route::post('save', ['as' => 'save.vendor', 'uses' => '\App\Http\Controllers\VendorsController@saveVendor']);
+
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
