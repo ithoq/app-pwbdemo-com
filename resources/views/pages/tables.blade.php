@@ -58,6 +58,7 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- START JUMBOTRON -->
+
         <div class="jumbotron" data-pages="parallax">
             <div class=" container-fluid   container-fixed-lg sm-p-l-0 sm-p-r-0">
                 <div class="inner">
@@ -100,6 +101,7 @@
             </div>
         </div>
         <!-- END JUMBOTRON -->
+
         <!-- START CONTAINER FLUID -->
         <div class=" container-fluid   container-fixed-lg bg-white">
             <!-- START card -->
@@ -339,6 +341,7 @@
             <!-- END card -->
         </div>
         <!-- END CONTAINER FLUID -->
+
         <!-- START CONTAINER FLUID -->
         <div class=" container-fluid   container-fixed-lg">
             <!-- START card -->
@@ -442,6 +445,7 @@
             <!-- END card -->
         </div>
         <!-- END CONTAINER FLUID -->
+
         <!-- START CONTAINER FLUID -->
         <div class=" container-fluid   container-fixed-lg bg-white">
             <!-- START card -->

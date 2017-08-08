@@ -7,17 +7,12 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{$ezapp_set['base_url']}}/pages/ico/76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="{{$ezapp_set['base_url']}}/pages/ico/120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="{{$ezapp_set['base_url']}}/pages/ico/152.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{$ezapp_set['base_url']}}/favicon.ico" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta content="" name="description" />
     <meta content="" name="author" />
-
-
-
-
-
 
    <!-- dashbaord, forms, tables -->
     <link href="{{$ezapp_set['base_url']}}/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />

@@ -36,7 +36,7 @@
                 <div class="form-group form-group-default">
                     <label>Email</label>
                     <div class="controls">
-                        <input type="text" name="email" placeholder="Your Email" class="form-control" required>
+                        <input type="text" name="email" placeholder="Your Email" class="form-control" style="font-size:25px; height:40px;font-family: 'Baloo Paaji', cursive;" required>
                     </div>
                 </div>
                 <!-- END Form Control-->
@@ -45,10 +45,11 @@
                 <div class="form-group form-group-default">
                     <label>Password</label>
                     <div class="controls">
-                        <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+                        <input type="password" class="form-control" name="password" placeholder="Your Password" style="font-size:25px; height:35px;font-family: 'Baloo Paaji', cursive;" required>
                     </div>
                 </div>
 
+                <?php /*
                 <!-- START Form Control-->
                 <!--
                 <div class="row">
@@ -64,11 +65,12 @@
                 </div>
                 -->
                 <!-- END Form Control-->
+                */ ?>
 
-                <button class="btn btn-primary btn-cons m-t-10" type="submit">Sign In</button>
+                <button class="btn btn-primary btn-lg btn-cons m-t-10" type="submit">Sign In</button>
             </form>
             <!--END Login Form-->
-
+            <?php /*
             <div class="pull-bottom sm-pull-bottom">
                 <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
                     <div class="col-sm-3 col-md-2 no-padding">
@@ -85,6 +87,7 @@
                     </div>
                 </div>
             </div>
+            */ ?>
         </div>
     </div>
     <!-- END Login Right Container-->

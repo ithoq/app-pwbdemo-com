@@ -3,7 +3,7 @@
 
 @include('include.head')
 
-<body class="fixed-header">
+<body class="fixed-header menu-pin">
 
 @include('include.nav')
 
@@ -21,8 +21,10 @@
 
         </div>
         <!-- END PAGE CONTENT WRAPPER -->
-
-@include('sections.all')
+<?php /*
+@include('sections.right-menu')
+@include('sections.search')
+*/ ?>
 
 </div>
 <!-- END PAGE CONTAINER -->

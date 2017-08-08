@@ -2,31 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vendor;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class EZAppController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public
-        $ezpage_settings,
         $ezapp_set;
+
+    public
+        $Vendors;
 
     public function __construct(Request $request)
     {
         $this->ezSetDefaultConstants();
         $this->ezSetPathConstants($_SERVER['REQUEST_URI']);
 
-        $this->ezapp_set['view_display'] = EZ_PAGES_DIR._EZPERIOD_.EZ_SET_VIEW;
+        $this->ezapp_set['view_display'] = EZ_PAGES_DIR.EZ_SET_VIEWDIR.EZ_SET_VIEW;
         $this->ezapp_set['auth_redirect'] = false;
         $this->ezapp_set['redirect_url'] = EZ_DASHBOARD_VIEW;
         $this->ezapp_set['base_url'] = url('/');
+        $this->ezapp_set['js'] = 'dashboard';
 
-        //$this->middleware('auth');
+        $this->Vendors = new Vendor();
+
+        $this->middleware('auth');
+
 
     }
 
@@ -40,47 +49,36 @@ class EZAppController extends BaseController
         }
         if ( isset( $uri_array[1]) ) {
             if (isset($uri_array[2])) {
-
-                /*switch ($uri_array[1]) {
-                    case 'learner':
-
-                        (isset($uri_array[1])) ? $platform = $uri_array[1] : $dir = 'learner';
-                        (isset($uri_array[2])) ? $dir = $uri_array[2] : $dir = 'courses';
-
-                        if (isset($uri_array[3])) {
-                            if ( is_numeric($uri_array[3]) ) {
-                                $uri_array[3] = '';
-                                $dash = '';
-                            }
-
-                            $file = $uri_array[2].$dash.$uri_array[3];
-
-                        } else { $file = $uri_array[2]; }
-
-                        define('RCME_PLATFORM', 'learner');
-                        define('RCME_VIEW_PAGES_SUB_DIR', $dir);
-                        define('RCME_VIEW_PAGES_SUB_FILE', $file);
-                        break;
-                }*/
-            } else { // default values for uri this can also redirect to page not found
-
+                define('EZ_SET_VIEW', $uri_array[1].'-'.$uri_array[2]);
+                define('EZ_SET_VIEWDIR', $uri_array[1].'.');
+                define('EZ_SET_MODEL', $uri_array[1]);
+            } else {
                 define('EZ_SET_VIEW', $uri_array[1]);
+                define('EZ_SET_MODEL', $uri_array[1]);
+
+                $path = resource_path();
+                if (file_exists($path.'/views/pages/'.$uri_array[1]) ) {
+                    define('EZ_SET_VIEWDIR', $uri_array[1].'.');
+                } else {
+                    define('EZ_SET_VIEWDIR', '');
+                }
             }
-        } else {
-            define('EZ_SET_VIEW',  (defined('EZ_DASHBOARD_VIEW') )? EZ_DASHBOARD_VIEW: 'dashbaord');
         }
 
         if(!defined('EZ_SET_VIEW') ) { define('EZ_SET_VIEW', ''); }
+        if(!defined('EZ_SET_VIEWDIR') ) { define('EZ_SET_VIEWDIR', ''); }
+        if(!defined('EZ_SET_MODEL') ) { define('EZ_SET_MODEL', ''); }
+
 
     }
 
     public function ezSetDefaultConstants(){
 
         // directories
-        define('EZ_PAGES_DIR', 'pages');
-        define('EZ_LAYOUTS_DIR', 'layouts');
-        define('EZ_INCLUDES_DIR', 'includes');
-        define('EZ_SECTIONS_DIR', 'sections');
+        define('EZ_PAGES_DIR', 'pages.');
+        define('EZ_LAYOUTS_DIR', 'layouts.');
+        define('EZ_INCLUDES_DIR', 'includes.');
+        define('EZ_SECTIONS_DIR', 'sections.');
 
         //files
         define('EZ_MASTER_VIEW', 'master');
@@ -92,11 +90,20 @@ class EZAppController extends BaseController
         define('EZ_LOGIN_VIEW', 'ezlogin');
 
         //symbols
-        define('_EZPERIOD_', '.');
-        define('_EZFORSLASH_', '/');
     }
 
-    public function ezAppDisplayPage($ezpage_settings = [] ) {
+    public function ezGetArrayFields($array) {
+
+        foreach($array as $key => $value ) {
+
+            $field[] = $key;
+
+        }
+
+        return $field;
+    }
+
+    public function ezAppDisplayPage() {
 
         if ( $this->ezapp_set['auth_redirect'] === true ) {
             return redirect($this->ezapp_set['redirect_url']);
@@ -104,9 +111,9 @@ class EZAppController extends BaseController
 
         $view_vars =
             [
-                'page_settings' => $ezpage_settings,
                 'ezapp_set' => $this->ezapp_set
             ];
+
         // display the courses page
         return view($this->ezapp_set['view_display'], $view_vars);
     }

@@ -11,7 +11,9 @@ class DashboardController extends EZAppController
 
     public function index(Request $request){
 
-        return $this->ezAppDisplayPage($this->ezpage_settings);
+        $this->ezapp_set['js'] = 'dashboard';
+
+        return $this->ezAppDisplayPage();
 
     }
 }
