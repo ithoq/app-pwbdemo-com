@@ -20,7 +20,7 @@
 
 Auth::routes();
 
-Route::get('/', ['as' => 'root', 'uses' => '\App\Http\Controllers\Auth\DashboardController@index']);
+Route::get('/', ['as' => 'root', 'uses' => '\App\Http\Controllers\DashboardController@index']);
 //Route::get('login', ['as' => 'root', 'uses' => '\App\Http\Controllers\Auth\LoginController@login']);
 Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
 Route::get('forms', ['as' => 'forms', 'uses' => '\App\Http\Controllers\FormsController@index']);
