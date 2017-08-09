@@ -8,7 +8,7 @@ switch($ezapp_set['js']) {
     case 'forms':
     case 'tables':
 ?>
-<!-- dashboard, forms, tables -->
+<!-- dashboard, forms, tables {{$ezapp_set['js']}} -->
 <script src="{{$ezapp_set['base_url']}}/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <script src="{{$ezapp_set['base_url']}}/assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="{{$ezapp_set['base_url']}}/assets/plugins/modernizr.custom.js" type="text/javascript"></script>

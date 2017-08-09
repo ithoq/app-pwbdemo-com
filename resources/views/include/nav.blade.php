@@ -28,7 +28,7 @@
 
     <!-- BEGIN SIDEBAR MENU HEADER-->
     <div class="sidebar-header">
-        <img src="assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png" data-src-retina="assets/img/logo_white_2x.png" width="78" height="22">
+        <img src="assets/img/logo/ezapp-logo-white.png" alt="logo" class="brand" data-src="assets/img/logo/ezapp-logo-white.png" data-src-retina="assets/img/logo/ezapp-logo-white.png" height="22">
 
         <div class="sidebar-header-controls">
             <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20 hidden-md-down" data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>

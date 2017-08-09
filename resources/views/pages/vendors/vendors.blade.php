@@ -40,6 +40,12 @@
                                         <br> for UI/UX at REVOX</p>
                                     <br>
                                     <button class="btn btn-primary btn-cons">More</button>
+
+
+                                            <button id="show-modal" class="btn btn-primary btn-cons"><i class="fa fa-plus"></i> Add {{EZ_SET_MODEL}}
+                                            </button>
+
+
                                 </div>
                             </div>
                             <!-- END card -->

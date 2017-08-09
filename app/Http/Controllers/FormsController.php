@@ -7,9 +7,12 @@ use App\Http\Controllers\EZAppController;
 
 class FormsController extends EZAppController
 {
-    public function index(Request $request){
+    public function index(Request $request) {
 
-        return $this->ezAppDisplayPage($this->ezpage_settings);
+        //$this->ezapp_set['view_display'] = '';
+        $this->ezapp_set['js'] = 'forms';
 
+
+        return $this->ezAppDisplayPage();
     }
 }

@@ -9,12 +9,14 @@
             </div>
             <div class="modal-body">
                 <p class="small-text">Create a new app using this form, make sure you fill them all</p>
-                <form role="form">
+                <div id="form-alert"><p class="small-text"></p></div>
+                <form role="form" id="vendors-form" action="{{$ezapp_set['base_url']}}/vendors/save" method="post">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group form-group-default">
                                 <label>name</label>
-                                <input id="appName" type="text" class="form-control" placeholder="Name of your app">
+                                <input name="vendor_id" type="text" class="form-control" placeholder="The Vendor ID">
                             </div>
                         </div>
                     </div>
@@ -22,28 +24,14 @@
                         <div class="col-sm-12">
                             <div class="form-group form-group-default">
                                 <label>Description</label>
-                                <input id="appDescription" type="text" class="form-control" placeholder="Tell us more about it">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group form-group-default">
-                                <label>Price</label>
-                                <input id="appPrice" type="text" class="form-control" placeholder="your price">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group form-group-default">
-                                <label>Notes</label>
-                                <input id="appNotes" type="text" class="form-control" placeholder="a note">
+                                <input name="name" type="text" class="form-control" placeholder="The Vendor Name">
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button id="add-app" type="button" class="btn btn-primary  btn-cons">Add</button>
+                <input id="vendor-submit"  type="submit" class="btn btn-primary  btn-cons" value="Save">
                 <button type="button" class="btn btn-cons" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -52,3 +40,21 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- END MODAL STICK UP  -->
+<script src="{{$ezapp_set['base_url']}}/assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script>
+
+    $(function(){
+        $("#vendor-submit").on('click', function(e){
+            alert('OKAY');
+            e.preventDefault();
+            $.ajax({
+                url: "{{$ezapp_set['base_url']}}/vendors/save",
+                type: "POST",
+                data: $('#vendors-form').serialize(),
+                success: function(data){
+                    $("#form-alert").html("Successfully submitted.");
+                }
+            });
+        });
+    });
+</script>

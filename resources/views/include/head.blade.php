@@ -51,6 +51,7 @@
 
     <!-- dashbaord, forms, tables -->
     <link href="{{$ezapp_set['base_url']}}/pages/css/pages-icons.css" rel="stylesheet" type="text/css">
-    <link class="main-stylesheet" href="{{$ezapp_set['base_url']}}/pages/css/pages.css" rel="stylesheet" type="text/css" />
+    <!--link class="main-stylesheet" href="{{$ezapp_set['base_url']}}/pages/css/pages.css" rel="stylesheet" type="text/css" /-->
+    <link class="main-stylesheet" href="{{$ezapp_set['base_url']}}/pages/css/themes/ezapp.css" rel="stylesheet" type="text/css" />
 
 </head>

@@ -22,7 +22,8 @@
     <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
-    <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+    <!--link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" /-->
+    <link class="main-stylesheet" href="pages/css/themes/ezapp.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <script type="text/javascript">
         window.onload = function()

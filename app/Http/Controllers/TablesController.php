@@ -7,9 +7,11 @@ use App\Http\Controllers\EZAppController;
 
 class TablesController extends EZAppController
 {
-    public function index(Request $request){
+    public function index(Request $request) {
 
-        return $this->ezAppDisplayPage($this->ezpage_settings);
+        //$this->ezapp_set['view_display'] = '';
+        $this->ezapp_set['js'] = 'tables';
 
+        return $this->ezAppDisplayPage();
     }
 }
