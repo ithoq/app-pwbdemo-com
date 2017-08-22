@@ -54,4 +54,14 @@
     <!--link class="main-stylesheet" href="{{$ezapp_set['base_url']}}/pages/css/pages.css" rel="stylesheet" type="text/css" /-->
     <link class="main-stylesheet" href="{{$ezapp_set['base_url']}}/pages/css/themes/ezapp.css" rel="stylesheet" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800|Open+Sans" rel="stylesheet">
+    <link href="assets/css/ezapp-custom.css" rel="stylesheet" type="text/css" />
+    <!--
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Nunito', sans-serif;
+
+    -->
+
 </head>

@@ -1,7 +1,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
-    <title>Pages - Admin Dashboard UI Kit - Lock Screen</title>
+    <title>EZAPP - We Make Life Easy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <link rel="apple-touch-icon" href="pages/ico/60.png">
     <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
@@ -24,7 +24,15 @@
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
     <!--link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" /-->
     <link class="main-stylesheet" href="pages/css/themes/ezapp.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800|Open+Sans" rel="stylesheet">
+    <link href="assets/css/ezapp-custom.css" rel="stylesheet" type="text/css" />
+    <!--
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Nunito', sans-serif;
+
+    -->
     <script type="text/javascript">
         window.onload = function()
         {

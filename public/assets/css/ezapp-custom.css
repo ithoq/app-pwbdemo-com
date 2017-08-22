@@ -1,0 +1,11 @@
+
+
+input.form-control {
+    font-size:20px;
+    height:35px !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-group {
+    height: 60px;
+}

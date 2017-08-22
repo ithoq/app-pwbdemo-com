@@ -36,7 +36,7 @@
                 <div class="form-group form-group-default">
                     <label>Email</label>
                     <div class="controls">
-                        <input type="text" name="email" placeholder="Your Email" class="form-control" style="font-size:25px; height:40px;font-family: 'Baloo Paaji', cursive;" required>
+                        <input type="text" name="email" placeholder="Your Email" class="form-control"  required>
                     </div>
                 </div>
                 <!-- END Form Control-->
@@ -45,7 +45,7 @@
                 <div class="form-group form-group-default">
                     <label>Password</label>
                     <div class="controls">
-                        <input type="password" class="form-control" name="password" placeholder="Your Password" style="font-size:25px; height:35px;font-family: 'Baloo Paaji', cursive;" required>
+                        <input type="password" class="form-control" name="password" placeholder="Your Password" required>
                     </div>
                 </div>
 
