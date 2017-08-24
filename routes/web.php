@@ -20,7 +20,12 @@
 
 Auth::routes();
 
-Route::get('/', ['as' => 'root', 'uses' => '\App\Http\Controllers\DashboardController@index']);
+//Route::get('/', ['as' => 'root', 'uses' => '\App\Http\Controllers\DashboardController@index']);
+
+Route::get('/', function() {
+   return redirect('/dashboard');
+});
+
 //Route::get('login', ['as' => 'root', 'uses' => '\App\Http\Controllers\Auth\LoginController@login']);
 Route::get('dashboard', ['as' => 'samples', 'uses' => '\App\Http\Controllers\DashboardController@index']);
 Route::get('forms', ['as' => 'forms', 'uses' => '\App\Http\Controllers\FormsController@index']);
@@ -40,6 +45,13 @@ Route::group(['prefix' => 'vendors'], function () {
     Route::get('/', ['as' => 'vendors', 'uses' => '\App\Http\Controllers\VendorsController@index']);
     Route::get('create', ['as' => 'create.vendor', 'uses' => '\App\Http\Controllers\VendorsController@createVendor']);
     Route::post('save', ['as' => 'save.vendor', 'uses' => '\App\Http\Controllers\VendorsController@saveVendor']);
+
+});
+
+Route::group(['prefix' => 'jobs'], function () {
+
+    Route::get('/', ['as' => 'jobs', 'uses' => '\App\Http\Controllers\JobsController@index']);
+    Route::get('api', ['as' => 'api', 'uses' => '\App\Http\Controllers\JobsController@api']);
 
 });
 

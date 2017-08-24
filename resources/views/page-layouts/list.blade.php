@@ -5,11 +5,17 @@
         <div class="card-header  d-flex justify-content-between">
             <div class="card-title">List of {{EZ_SET_MODEL}}
             </div>
-            <div class="export-options-container"></div>
+            <!--div class="export-options-container"></div -->
+            <div class="pull-right">
+                <div class="col-xs-12">
+                    <input type="text" id="search-table" class="form-control pull-right" placeholder="Search">
+                </div>
+            </div>
             <!-- <div class="clearfix"></div> -->
         </div>
         <div class="card-block">
-            <table class="table table-striped" id="tableWithExportOptions">
+            @if($ezapp_set[EZ_SET_MODEL] !== false )
+            <table class="table table-striped" id="tableWithSearch">
                 <thead>
                 <tr>
                     @foreach( $ezapp_set[EZ_SET_MODEL.'_fields'] as $key => $value )
@@ -27,6 +33,7 @@
                 @endforeach
                 </tbody>
             </table>
+            @endif
         </div>
     </div>
     <!-- END card -->

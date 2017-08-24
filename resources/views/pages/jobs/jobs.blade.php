@@ -6,7 +6,7 @@
     <div class="content ">
 
         @if ($ezapp_set['modal'] === true )
-            @include('pages.'.EZ_SET_MODEL.'.modals.'.EZ_SET_MODEL.'-create-modal')
+        @include('pages.'.EZ_SET_MODEL.'.modals.'.EZ_SET_MODEL.'-create-modal')
         @endif
 
         <div class="jumbotron" data-pages="parallax">
@@ -44,8 +44,8 @@
                                     <button class="btn btn-primary btn-cons">More</button>
 
                                     @if ($ezapp_set['modal'] === true )
-                                        <button id="show-modal" class="btn btn-primary btn-cons"><i class="fa fa-plus"></i> Add {{EZ_SET_MODEL}}
-                                        </button>
+                                    <button id="show-modal" class="btn btn-primary btn-cons"><i class="fa fa-plus"></i> Add {{EZ_SET_MODEL}}
+                                    </button>
                                     @endif
 
 

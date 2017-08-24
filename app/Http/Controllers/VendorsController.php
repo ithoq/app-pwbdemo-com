@@ -15,6 +15,7 @@ class VendorsController extends EZAppController
         //$this->ezapp_set['view_display'] = '';
         $this->ezapp_set['js'] = 'tables';
         $this->ezapp_set['vendors'] = false;
+        $this->ezapp_set['modal'] = true;
 
         $vendors =  Vendor::all();
 
