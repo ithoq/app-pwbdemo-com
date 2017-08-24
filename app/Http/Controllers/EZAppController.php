@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DriverLog;
 use App\Models\Vendor;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -19,7 +20,8 @@ class EZAppController extends BaseController
         $ezapp_set;
 
     public
-        $Vendors;
+        $Vendors,
+        $DriverLogs;
 
     public function __construct(Request $request)
     {
@@ -33,6 +35,7 @@ class EZAppController extends BaseController
         $this->ezapp_set['js'] = 'dashboard';
 
         $this->Vendors = new Vendor();
+        $this->DriverLogs = new DriverLog();
 
         $this->middleware('auth');
 

@@ -55,6 +55,12 @@ Route::group(['prefix' => 'jobs'], function () {
 
 });
 
+Route::group(['prefix' => 'driver_logs'], function () {
+
+    Route::get('/', ['as' => 'driver_logs', 'uses' => '\App\Http\Controllers\DriverLogsController@index']);
+    Route::post('save', ['as' => 'save.driver_log', 'uses' => '\App\Http\Controllers\DriverLogsController@saveDriverLog']);
+});
+
 
 
 
