@@ -59,6 +59,8 @@ Route::group(['prefix' => 'driver_logs'], function () {
 
     Route::get('/', ['as' => 'driver_logs', 'uses' => '\App\Http\Controllers\DriverLogsController@index']);
     Route::post('save', ['as' => 'save.driver_log', 'uses' => '\App\Http\Controllers\DriverLogsController@saveDriverLog']);
+    Route::get('update/{log_id}', ['as' => 'update.driver_log', 'uses' => '\App\Http\Controllers\DriverLogsController@updateDriverLog']);
+    Route::get('api', ['as' => 'api', 'uses' => '\App\Http\Controllers\DriverLogsController@api']);
 });
 
 

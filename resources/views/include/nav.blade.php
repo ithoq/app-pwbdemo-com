@@ -54,21 +54,11 @@
             </li>
 
             <!-- FORMS -->
-            <li class="m-t-30 ">
-                <a href="/forms" class="detailed">
-                    <span class="title">Forms</span>
-                    <span class="details">12 New Updates</span>
+            <li>
+                <a href="/driver_logs" class="detailed">
+                    <span class="title">Driver Logs</span>
                 </a>
                 <span class="icon-thumbnail"><i class="pg-form"></i></span>
-            </li>
-
-            <!-- TABLES -->
-            <li class="m-t-30 ">
-                <a href="/tables" class="detailed">
-                    <span class="title">Tables</span>
-                    <span class="details">12 New Updates</span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg-tables"></i></span>
             </li>
 
         </ul>

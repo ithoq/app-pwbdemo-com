@@ -27,7 +27,7 @@
                 @foreach( $ezapp_set[EZ_SET_MODEL] as $key => $values)
                     <tr class="odd gradeX">
                         @foreach( $values as $subkey => $value)
-                            <td>{{$value}}</td>
+                            <td onclick="javascript:location='{{$ezapp_set['base_url']}}/{{EZ_SET_MODEL}}/update/{{$values['job_id']}}'" style="cursor: pointer">{{$value}}</td>
                         @endforeach
                     </tr>
                 @endforeach
