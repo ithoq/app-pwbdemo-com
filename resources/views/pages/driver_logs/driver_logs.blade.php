@@ -59,7 +59,7 @@
         </div>
         <!-- END JUMBOTRON -->
 
-        @include('page-layouts.list')
+        @include('page-layouts.driver_logs.driver_logs-list')
 
     </div>
     <!-- END PAGE CONTENT -->

@@ -49,12 +49,12 @@ class DriverLogsController extends EZAppController
                 if ($values['empty'] == 'on') {
                     $create_driver_log->empty = 1;
                 }
-            }
+            } else { $create_driver_log->empty = 0; }
             if ( isset($values['load']) ) {
                 if ($values['load'] == 'on') {
                     $create_driver_log->load = 1;
                 }
-            }
+            } else { $create_driver_log->load = 0; }
         } else {
 
             $create_driver_log = $this->DriverLogs;
@@ -75,6 +75,13 @@ class DriverLogsController extends EZAppController
 
         $this->ezapp_set['js'] = 'forms';
         $this->ezapp_set['job_id'] = $job_id;
+
+        $driver_logs =  $this->DriverLogs->where(['job_id' => $job_id])->get();
+
+        if ( $driver_logs->isNotEmpty() ) {
+            $this->ezapp_set['driver_logs'] = $driver_logs->first()->toArray();
+            $this->ezapp_set['driver_logs_fields'] = $this->ezGetArrayFields($driver_logs->first()->toArray());
+        }
 
         return $this->ezAppDisplayPage();
     }

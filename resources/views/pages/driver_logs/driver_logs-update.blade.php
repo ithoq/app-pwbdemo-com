@@ -81,15 +81,15 @@
 
                                 <div class="row">
                                     <div class="col-md-1">
-                                        <div class="form-group form-group-default">
+                                        <div id="empty" class="form-group form-group-default input-empty">
                                             <label>Empty</label>
-                                            <input type="checkbox" name="empty" data-init-plugin="switchery" data-size="large" data-color="primary"/>
+                                            <input type="checkbox" name="empty" data-init-plugin="switchery" data-size="large" data-color="primary" <?php echo($ezapp_set['driver_logs']['empty'] == 1)? 'checked="checked"':''; ?>/>
                                         </div>
                                     </div>
-                                    <div class="col-md-1">
-                                        <div class="form-group form-group-default">
+                                    <div id="load" class="col-md-1">
+                                        <div class="form-group form-group-default input-load" >
                                             <label>Load</label>
-                                            <input type="checkbox" name="load" data-init-plugin="switchery" data-size="large" data-color="primary" />
+                                            <input type="checkbox" name="load" data-init-plugin="switchery" data-size="large" data-color="primary" <?php echo($ezapp_set['driver_logs']['load'] == 1)? 'checked="checked"':''; ?> />
                                         </div>
                                     </div>
                                     <div class="col-md-10"></div>
@@ -115,5 +115,19 @@
 
     </div>
     <!-- END PAGE CONTENT -->
+    <script src="{{$ezapp_set['base_url']}}/assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $("#empty").on('click', function(event) {
+                $("#load").toggle();
+            });
+
+            $("#load").on('click', function(event) {
+                $("#empty").toggle();
+            });
+
+        });
+
+    </script>
 
 @endsection
