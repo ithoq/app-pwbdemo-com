@@ -19,32 +19,17 @@
                     </ol>
                     <!-- END BREADCRUMB -->
                     <div class="row">
-                        <div class="col-xl-7 col-lg-6 ">
-                            <!-- START card -->
-                            <div class="full-height">
-                                <div class="card-block text-center">
-                                    <img class="image-responsive-height demo-mw-600" src="assets/img/demo/tables.jpg" alt="">
-                                </div>
-                            </div>
-                            <!-- END card -->
-                        </div>
                         <div class="col-xl-5 col-lg-6 ">
                             <!-- START card -->
                             <div class="card card-transparent">
-                                <div class="card-header ">
-                                    <div class="card-title">Getting started
-                                    </div>
-                                </div>
                                 <div class="card-block">
-                                    <h3>Easier than finding a needle in the haystack.</h3>
-                                    <p>Sharing the same stylized design layout, these tables allows for the effective compilation and organization of data with easy access and maneuverability for users. </p>
-                                    <p class="small hint-text m-t-5">VIA senior product manage
-                                        <br> for UI/UX at REVOX</p>
-                                    <br>
-                                    <button class="btn btn-primary btn-cons">More</button>
+                                    <h3>Manage Your Driver Logs.</h3>
+                                    <p>Use the table below to manage your driver logs.  Click on a log to update.  Click on Add Driver Log to add new Log.</p>
+
+                                    <hr />
 
                                     @if ($ezapp_set['modal'] === true )
-                                        <button id="show-modal" class="btn btn-primary btn-cons"><i class="fa fa-plus"></i> Add {{EZ_SET_MODEL}}
+                                        <button id="show-modal" class="btn btn-primary btn-cons"><i class="fa fa-plus"></i> Add New Log
                                         </button>
                                     @endif
 

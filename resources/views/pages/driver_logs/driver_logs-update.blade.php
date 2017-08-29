@@ -16,28 +16,12 @@
                         <li class="breadcrumb-item active">Update {{EZ_SET_MODEL}}</li>
                     </ol>
                     <!-- END BREADCRUMB -->
+
                     <div class="row">
-                        <div class="col-xl-7 col-lg-6 ">
-                            <!-- START card -->
-                            <div class="card card-default">
-                                <div class="card-block text-center">
-                                <!--img class="image-responsive-height demo-mw-600" src="{{$ezapp_set['base_url']}}/assets/img/demo/form_hero.gif" alt=""-->
-                                    <h3>This is some sample Text.</h3>
-                                </div>
-                            </div>
-                            <!-- END card -->
-                        </div>
                         <div class="col-xl-5 col-lg-6 ">
                             <!-- START card -->
                             <div class="card card-transparent">
-                                <div class="card-header ">
-                                    <div class="card-title">Getting started
-                                    </div>
-                                </div>
                                 <div class="card-block">
-                                    <h3>One of the most underestimated elements of design is typography. However, it’s
-                                        critical in both print and web media. We Made it Perfect in both.</h3>
-                                    <br>
                                     <div>
                                         <div class="profile-img-wrapper m-t-5 inline">
                                             <img width="35" height="35" src="{{$ezapp_set['base_url']}}/assets/img/profiles/avatar_small.jpg" alt="" data-src="{{$ezapp_set['base_url']}}/assets/img/profiles/avatar_small.jpg" data-src-retina="{{$ezapp_set['base_url']}}/assets/img/profiles/avatar_small2x.jpg">
@@ -45,8 +29,8 @@
                                             </div>
                                         </div>
                                         <div class="inline m-l-10">
-                                            <p class="small hint-text m-t-5">VIA senior product manage
-                                                <br> for UI/UX at REVOX</p>
+                                            <p class="small hint-text m-t-5">John Doe
+                                                <br> J & J Driver</p>
                                         </div>
                                     </div>
                                 </div>
@@ -54,6 +38,20 @@
                             <!-- END card -->
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 ">
+                            <!-- START card -->
+                            <div class="card card-transparent">
+                                <div class="card-block">
+                                <!--img class="image-responsive-height demo-mw-600" src="{{$ezapp_set['base_url']}}/assets/img/demo/form_hero.gif" alt=""-->
+                                    <h3><strong>JOB #</strong> {{$ezapp_set['job_id']}}<br /><strong>Date: </strong>Thursday August 4, 2017</h3>
+                                </div>
+                            </div>
+                            <!-- END card -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -67,13 +65,10 @@
                     <div class="card card-default">
                         <div class="card-header ">
                             <div class="card-title">
-                                Create New Vendor
+                                Update Log Informaiton
                             </div>
                         </div>
                         <div class="card-block">
-                            <h5>
-                                Update {{EZ_SET_MODEL}} Informaiton
-                            </h5>
                             <form class="" method="post" action="{{$ezapp_set['base_url']}}/{{EZ_SET_MODEL}}/save" role="form">
 
                                 {{ csrf_field() }}
@@ -117,15 +112,20 @@
 
     </div>
     <!-- END PAGE CONTENT -->
+
+    <!-- {{$ezapp_set['driver_logs']['empty']}} -->
+    <!-- {{$ezapp_set['driver_logs']['load']}} -->
     <script src="{{$ezapp_set['base_url']}}/assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
 
-            @if ( $ezapp_set['driver_logs']['empty'] == 1 )
+            <?php if ( $ezapp_set['driver_logs']['empty'] == 1 ) { ?>
                 $("#load").toggle();
-            @elseif ($ezapp_set['driver_logs']['load'] == 1 )
-                $("#empty").toggle();
-            @endif
+            <?php } ?>
+
+            <?php if ($ezapp_set['driver_logs']['load'] == 1 ) { ?>
+            $("#empty").toggle();
+            <?php } ?>
 
             $("#empty").on('click', function(event) {
                 $("#load").toggle();
@@ -138,5 +138,6 @@
         });
 
     </script>
+
 
 @endsection

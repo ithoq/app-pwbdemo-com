@@ -24,7 +24,7 @@
     <!-- START Login Right Container-->
     <div class="login-container bg-white">
         <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-            <img src="assets/img/logo/ezapp-logo-black.png" alt="logo" data-src="assets/img/logo/ezapp-logo-black.png" data-src-retina="assets/img/logo/ezapp-logo-black.png" height="44">
+            <img src="assets/img/logo/eclipse-logo-black.png" alt="logo" data-src="assets/img/logo/eclipse-logo-black.png" data-src-retina="assets/img/logo/eclipse-logo-black.png" height="44">
 
             <p class="p-t-35">Sign Into Your Account</p>
             <!-- START Login Form -->

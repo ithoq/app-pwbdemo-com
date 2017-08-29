@@ -6,7 +6,7 @@
     <!-- END MOBILE SIDEBAR TOGGLE -->
     <div class="">
         <div class="brand inline   ">
-            <img src="{{$ezapp_set['base_url']}}/assets/img/logo/ezapp-logo-black.png" alt="logo" data-src="{{$ezapp_set['base_url']}}/assets/img/logo/ezapp-logo-black.png" data-src-retina="{{$ezapp_set['base_url']}}/assets/img/logo/ezapp-logo-black.png.png" height="22">
+            <img src="{{$ezapp_set['base_url']}}/assets/img/logo/eclipse-logo-black.png" alt="logo" data-src="{{$ezapp_set['base_url']}}/assets/img/logo/eclipse-logo-black.png" data-src-retina="{{$ezapp_set['base_url']}}/assets/img/logo/eclipse-logo-black.png.png" height="22">
         </div>
 
         <?php /*
