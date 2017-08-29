@@ -11,7 +11,7 @@
             <!-- START ROW -->
             <div class="row">
 
-                <div class="visible-xlg col-xlg-3">
+                <div class="col-xlg-3 col-md-6">
                     <div class="ar-2-3">
                         <!-- START WIDGET widget_tableWidget-->
                         <div class="widget-11 card no-border  no-margin widget-loader-bar">
@@ -170,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="visible-xlg col-xlg-3">
+                <div class="col-xlg-3 col-md-6">
                     <div class="ar-2-3">
                         <!-- START WIDGET widget_tableWidget-->
                         <div class="widget-11 card no-border  no-margin widget-loader-bar">
@@ -329,7 +329,7 @@
                     </div>
                 </div>
 
-                <div class="visible-xlg col-xlg-3">
+                <div class="col-xlg-3 col-md-6">
                     <div class="ar-2-3">
                         <!-- START WIDGET widget_tableWidget-->
                         <div class="widget-11 card no-border  no-margin widget-loader-bar">
@@ -488,7 +488,7 @@
                     </div>
                 </div>
 
-                <div class="visible-xlg col-xlg-3">
+                <div class="col-xlg-3 col-md-6">
                     <div class="ar-2-3">
                         <!-- START WIDGET widget_tableWidget-->
                         <div class="widget-11 card no-border  no-margin widget-loader-bar">
